@@ -10,7 +10,7 @@ jobs:
   summarize:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@3
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
