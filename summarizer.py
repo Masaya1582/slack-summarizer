@@ -168,7 +168,6 @@ if OPEN_AI_TOKEN == "" or SLACK_BOT_TOKEN == "" or CHANNEL_ID == "":
 # Set OpenAI API key
 openai.api_key = OPEN_AI_TOKEN
 
-
 def runner():
     """
     app runner
@@ -179,6 +178,11 @@ def runner():
 
     result_text = []
     for channel in slack_client.channels:
+        if "times" in channel["name"]:
+            if DEBUG:
+                print(f"Skipping channel: {channel['name']}")
+            continue
+
         if DEBUG:
             print(channel["name"])
         messages = slack_client.load_messages(channel["id"], start_time,
