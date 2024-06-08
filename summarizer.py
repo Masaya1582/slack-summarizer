@@ -198,7 +198,7 @@ def runner():
             text = summarize("\n".join(splitted_messages), LANGUAGE)
             result_text.append(text)
 
-    title = (f"{start_time.strftime('%Y-%m-%d')} 昨日のサマリーをお届けします :neko_delivery: \n\n")
+    title = (f"{start_time.strftime('%Y-%m-%d')} 総員、第一種サマリー確認配置(読まなければ帰れ、冬月はついでにエヴァに乗れ) :eva: \n\n")
 
     if DEBUG:
         print("\n".join(result_text))
