@@ -178,7 +178,7 @@ def runner():
 
     result_text = []
     for channel in slack_client.channels:
-        if "times" in channel["name"]:
+        if "times" in channel["name"] or "飲酒部" in channel["name"]:
             if DEBUG:
                 print(f"Skipping channel: {channel['name']}")
             continue
